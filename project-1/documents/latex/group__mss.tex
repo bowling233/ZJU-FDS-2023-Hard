@@ -1,0 +1,67 @@
+\hypertarget{group__mss}{}\doxysubsection{Maximum Submatrix Sum}
+\label{group__mss}\index{Maximum Submatrix Sum@{Maximum Submatrix Sum}}
+
+
+Maximum Submatrix Sum.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ \mbox{\hyperlink{group__mss_gacd812622b70ce9265b02e78c706072b1}{Max\+Submatrix\+N6}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em The naive version of the maximum submatrix sum algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ \mbox{\hyperlink{group__mss_ga4d0283850a9a0f7c6abb71492f96c710}{Max\+Submatrix\+N4}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em This function implements the N4 version of the maximum submatrix sum algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ \mbox{\hyperlink{group__mss_gac8f39ddd45ed17abbc923a9e1ba60704}{Max\+Submatrix}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em This function implements my version of the maximum submatrix sum algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Maximum Submatrix Sum. 
+
+This module contains the functions for the maximum submatrix sum problem. Their APIs are unified to make it easy to test them.
+
+All the functions in this module take a matrix as input and return another matrix as output, even if the result is the same as the input (to prevent double free problem). The input matrix is not modified. There is no constraint on the input matrix. The output matrix is also a general matrix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to the matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix$\ast$ Pointer to the result matrix. 
+\end{DoxyReturn}
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{group__mss_gac8f39ddd45ed17abbc923a9e1ba60704}\label{group__mss_gac8f39ddd45ed17abbc923a9e1ba60704}} 
+\index{Maximum Submatrix Sum@{Maximum Submatrix Sum}!MaxSubmatrix@{MaxSubmatrix}}
+\index{MaxSubmatrix@{MaxSubmatrix}!Maximum Submatrix Sum@{Maximum Submatrix Sum}}
+\doxyparagraph{\texorpdfstring{MaxSubmatrix()}{MaxSubmatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ Max\+Submatrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+This function implements my version of the maximum submatrix sum algorithm. 
+
+It substitutes the N4 version of finding the maximum subarray sum with Kadane\textquotesingle{}s algorithm. This reduces the time complexity from O(n$^\wedge$4) to O(n$^\wedge$3). \mbox{\Hypertarget{group__mss_ga4d0283850a9a0f7c6abb71492f96c710}\label{group__mss_ga4d0283850a9a0f7c6abb71492f96c710}} 
+\index{Maximum Submatrix Sum@{Maximum Submatrix Sum}!MaxSubmatrixN4@{MaxSubmatrixN4}}
+\index{MaxSubmatrixN4@{MaxSubmatrixN4}!Maximum Submatrix Sum@{Maximum Submatrix Sum}}
+\doxyparagraph{\texorpdfstring{MaxSubmatrixN4()}{MaxSubmatrixN4()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ Max\+Submatrix\+N4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+This function implements the N4 version of the maximum submatrix sum algorithm. 
+
+Compared to the N6 version, this algorithm reduces the time complexity from O(n$^\wedge$6) to O(n$^\wedge$4). It sums each row of the submatrix and stores the sum in an array. Then it uses Kadane\textquotesingle{}s algorithm to find the maximum subarray sum of the array. \mbox{\Hypertarget{group__mss_gacd812622b70ce9265b02e78c706072b1}\label{group__mss_gacd812622b70ce9265b02e78c706072b1}} 
+\index{Maximum Submatrix Sum@{Maximum Submatrix Sum}!MaxSubmatrixN6@{MaxSubmatrixN6}}
+\index{MaxSubmatrixN6@{MaxSubmatrixN6}!Maximum Submatrix Sum@{Maximum Submatrix Sum}}
+\doxyparagraph{\texorpdfstring{MaxSubmatrixN6()}{MaxSubmatrixN6()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ Max\+Submatrix\+N6 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+The naive version of the maximum submatrix sum algorithm. 
+
+This algorithm simply enumerates all possible submatrices and finds the one with the maximum sum. The variable i, j, k, l means the submatrix is from row i to row k and from column j to column l. For each combination of i, j, k, l, it traverses all elements in the submatrix and calculates the sum. If the sum is larger than the maximum sum, it updates the maximum sum and the maximum submatrix. After traversing all possible submatrices, it returns the maximum submatrix. 

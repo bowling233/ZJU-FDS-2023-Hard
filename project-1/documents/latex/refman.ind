@@ -1,0 +1,55 @@
+\begin{theindex}
+
+  \item {CopyMatrix}
+    \subitem {mss.c}, \hyperpage{6}
+    \subitem {mss.h}, \hyperpage{8}
+  \item {CreateMatrix}
+    \subitem {mss.c}, \hyperpage{6}
+    \subitem {mss.h}, \hyperpage{8}
+
+  \indexspace
+
+  \item {FreeMatrix}
+    \subitem {mss.c}, \hyperpage{6}
+    \subitem {mss.h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {main.c}, \hyperpage{5}
+  \item {Matrix}, \hyperpage{4}
+  \item {Maximum Submatrix Sum}, \hyperpage{3}
+    \subitem {MaxSubmatrix}, \hyperpage{3}
+    \subitem {MaxSubmatrixN4}, \hyperpage{3}
+    \subitem {MaxSubmatrixN6}, \hyperpage{4}
+  \item {MaxSubmatrix}
+    \subitem {Maximum Submatrix Sum}, \hyperpage{3}
+  \item {MaxSubmatrixN4}
+    \subitem {Maximum Submatrix Sum}, \hyperpage{3}
+  \item {MaxSubmatrixN6}
+    \subitem {Maximum Submatrix Sum}, \hyperpage{4}
+  \item {mss.c}, \hyperpage{5}
+    \subitem {CopyMatrix}, \hyperpage{6}
+    \subitem {CreateMatrix}, \hyperpage{6}
+    \subitem {FreeMatrix}, \hyperpage{6}
+    \subitem {PrintMatrix}, \hyperpage{7}
+    \subitem {ReadMatrix}, \hyperpage{7}
+  \item {mss.h}, \hyperpage{7}, \hyperpage{11}
+    \subitem {CopyMatrix}, \hyperpage{8}
+    \subitem {CreateMatrix}, \hyperpage{8}
+    \subitem {FreeMatrix}, \hyperpage{9}
+    \subitem {PrintMatrix}, \hyperpage{9}
+    \subitem {ReadMatrix}, \hyperpage{9}
+
+  \indexspace
+
+  \item {PrintMatrix}
+    \subitem {mss.c}, \hyperpage{7}
+    \subitem {mss.h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {ReadMatrix}
+    \subitem {mss.c}, \hyperpage{7}
+    \subitem {mss.h}, \hyperpage{9}
+
+\end{theindex}

@@ -1,0 +1,143 @@
+\hypertarget{mss_8h}{}\doxysubsection{mss.\+h File Reference}
+\label{mss_8h}\index{mss.h@{mss.h}}
+
+
+\mbox{\hyperlink{structMatrix}{Matrix}} interface for the maximum submatrix sum problem.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMatrix}{Matrix}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structMatrix}{Matrix}} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mss_8h_a9570374e3dbc873595100dae1e584459}\label{mss_8h_a9570374e3dbc873595100dae1e584459}} 
+typedef struct \mbox{\hyperlink{structMatrix}{Matrix}} {\bfseries Matrix}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ \mbox{\hyperlink{mss_8h_a569065eb4872de197464bf1840f957f4}{Create\+Matrix}} (const int rows, const int cols)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{structMatrix}{Matrix}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ \mbox{\hyperlink{mss_8h_a385f312ca1d35ad07e0896eb8532ef48}{Copy\+Matrix}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Copy a \mbox{\hyperlink{structMatrix}{Matrix}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mss_8h_a92c3cbf68ca3acf09ba4796e70e1ceab}{Read\+Matrix}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m, FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Read \mbox{\hyperlink{structMatrix}{Matrix}} Elements from File. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mss_8h_a09b5ab66a616de9b29b1631ee4eb0c67}{Print\+Matrix}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m, FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Print \mbox{\hyperlink{structMatrix}{Matrix}} to File. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mss_8h_a939309c2a7206dd2e9596e9c8043c158}{Free\+Matrix}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Free the memory allocated for the matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ \mbox{\hyperlink{group__mss_gacd812622b70ce9265b02e78c706072b1}{Max\+Submatrix\+N6}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em The naive version of the maximum submatrix sum algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ \mbox{\hyperlink{group__mss_ga4d0283850a9a0f7c6abb71492f96c710}{Max\+Submatrix\+N4}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em This function implements the N4 version of the maximum submatrix sum algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ \mbox{\hyperlink{group__mss_gac8f39ddd45ed17abbc923a9e1ba60704}{Max\+Submatrix}} (\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em This function implements my version of the maximum submatrix sum algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+\mbox{\hyperlink{structMatrix}{Matrix}} interface for the maximum submatrix sum problem. 
+
+This file contains the definition of the matrix structure and interface for the maximum submatrix sum problem. 
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{mss_8h_a385f312ca1d35ad07e0896eb8532ef48}\label{mss_8h_a385f312ca1d35ad07e0896eb8532ef48}} 
+\index{mss.h@{mss.h}!CopyMatrix@{CopyMatrix}}
+\index{CopyMatrix@{CopyMatrix}!mss.h@{mss.h}}
+\doxyparagraph{\texorpdfstring{CopyMatrix()}{CopyMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ Copy\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Copy a \mbox{\hyperlink{structMatrix}{Matrix}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to the matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix$\ast$ Pointer to the new matrix.
+\end{DoxyReturn}
+This function creates a new matrix and copies the elements from the original matrix to the new matrix. \mbox{\Hypertarget{mss_8h_a569065eb4872de197464bf1840f957f4}\label{mss_8h_a569065eb4872de197464bf1840f957f4}} 
+\index{mss.h@{mss.h}!CreateMatrix@{CreateMatrix}}
+\index{CreateMatrix@{CreateMatrix}!mss.h@{mss.h}}
+\doxyparagraph{\texorpdfstring{CreateMatrix()}{CreateMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMatrix}{Matrix}} $\ast$ Create\+Matrix (\begin{DoxyParamCaption}\item[{const int}]{rows,  }\item[{const int}]{cols }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{structMatrix}{Matrix}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & Rows of the matrix. \\
+\hline
+{\em cols} & Columns of the matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix$\ast$ Pointer to the matrix.
+\end{DoxyReturn}
+This function uses malloc to allocate memory for the matrix structure and the matrix elements. So you need not to allocate memory for the matrix before calling this function.
+
+Because there is pointer in the matrix structure, you need to use \mbox{\hyperlink{mss_8c_a939309c2a7206dd2e9596e9c8043c158}{Free\+Matrix()}} function to free the memory allocated for the matrix. \mbox{\Hypertarget{mss_8h_a939309c2a7206dd2e9596e9c8043c158}\label{mss_8h_a939309c2a7206dd2e9596e9c8043c158}} 
+\index{mss.h@{mss.h}!FreeMatrix@{FreeMatrix}}
+\index{FreeMatrix@{FreeMatrix}!mss.h@{mss.h}}
+\doxyparagraph{\texorpdfstring{FreeMatrix()}{FreeMatrix()}}
+{\footnotesize\ttfamily void Free\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Free the memory allocated for the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to the matrix.\\
+\hline
+\end{DoxyParams}
+This function frees the memory allocated for the matrix structure and the matrix elements.
+
+There is pointer in the matrix structure, so you need to use this function to free the memory allocated for the matrix.
+
+\mbox{\hyperlink{structMatrix}{Matrix}} pointer should be set to NULL if not been initialized or was freed.
+
+This function will check if the pointer is NULL and prevent double free, so you need not to check it before calling this function. \mbox{\Hypertarget{mss_8h_a09b5ab66a616de9b29b1631ee4eb0c67}\label{mss_8h_a09b5ab66a616de9b29b1631ee4eb0c67}} 
+\index{mss.h@{mss.h}!PrintMatrix@{PrintMatrix}}
+\index{PrintMatrix@{PrintMatrix}!mss.h@{mss.h}}
+\doxyparagraph{\texorpdfstring{PrintMatrix()}{PrintMatrix()}}
+{\footnotesize\ttfamily void Print\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$}]{m,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Print \mbox{\hyperlink{structMatrix}{Matrix}} to File. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to the matrix. \\
+\hline
+{\em fp} & Pointer to the file to be written.\\
+\hline
+\end{DoxyParams}
+This function prints matrix elements to the file following row-\/major order. \mbox{\Hypertarget{mss_8h_a92c3cbf68ca3acf09ba4796e70e1ceab}\label{mss_8h_a92c3cbf68ca3acf09ba4796e70e1ceab}} 
+\index{mss.h@{mss.h}!ReadMatrix@{ReadMatrix}}
+\index{ReadMatrix@{ReadMatrix}!mss.h@{mss.h}}
+\doxyparagraph{\texorpdfstring{ReadMatrix()}{ReadMatrix()}}
+{\footnotesize\ttfamily void Read\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMatrix}{Matrix}} $\ast$}]{m,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Read \mbox{\hyperlink{structMatrix}{Matrix}} Elements from File. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to the matrix. \\
+\hline
+{\em fp} & Pointer to the file to be read.\\
+\hline
+\end{DoxyParams}
+This function reads matrix elements from the file following row-\/major order.
+
+Rows and cols should be read from the file before calling this function. Numbers of rows and cols of the matrix should already exist in the matrix structure. This function only reads the matrix elements. 

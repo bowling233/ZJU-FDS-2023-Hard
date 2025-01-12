@@ -1,0 +1,21 @@
+\hypertarget{index_intro_sec}{}\doxysubsection{Introduction}\label{index_intro_sec}
+The goal of this project is to find the maximum submatrix sum of a given matrix.\hypertarget{index_datafile_sec}{}\doxysubsection{Data File Format}\label{index_datafile_sec}
+The data file stores the matrix data. The first line is the number of rows and cols of the matrix. The following lines are the elements of the matrix. For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3 3 }
+\DoxyCodeLine{1 2 3 }
+\DoxyCodeLine{4 5 6 }
+\DoxyCodeLine{7 8 9}
+
+\end{DoxyCode}
+\hypertarget{index_report_sec}{}\doxysubsection{Report File Format}\label{index_report_sec}
+This program will append the result to the report file \char`\"{}report.\+csv\char`\"{}. The format is\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{6}{|X[-1]}|}
+\hline
+datasize&algorithm&iteration&ticks&total\+\_\+time&duration \\\cline{1-6}
+100&1&10&123456&0.\+123456&0.\+012345 \\\cline{1-6}
+\end{longtabu}
